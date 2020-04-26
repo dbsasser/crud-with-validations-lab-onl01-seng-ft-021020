@@ -5,7 +5,7 @@ class Song < ApplicationRecord
   validate :release_year_if_released
 
   def release_year_if_released
-    validates :release_year, presence: true if self.released
+    validates :release_year, presence: true, if self.released
   end
 
 end
