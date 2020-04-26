@@ -6,7 +6,7 @@ class Song < ApplicationRecord
   validate :release_year_cannot_be_in_the_future
 
   def release_year_cannot_be_in_the_future
-    if release_year.present? && release_year > Date.today.year 
+    if release_year.present? && release_year > Date.today.year
       errors.add(:release_year, "Can't be in the future")
     end
   end
